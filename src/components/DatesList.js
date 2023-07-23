@@ -17,7 +17,7 @@ export const DatesList = ({person}) => {
                   </div>
                 </div>
                 )
-              })) : <h3>There is no Appointments today</h3>}
+              })) : <h3 d-flex>There is no Appointments today</h3>}
 
             </div>
           </Col>

@@ -6,16 +6,20 @@ import { DatesAction  } from "./components/DatesAction";
 import React, { useState } from "react";
 function App() {
   const [personData, setPersonData] = useState(person)
-  const onDelete=()=> {
+  const onDelete=() => {
     setPersonData([])
+  }
+  const onViewData=() => {
+    setPersonData(person)
+    
   }
   return (
     <div className="font body">
       <Container className="py-2">
 
-        <DatesCount person={person}/>
-        <DatesList person={person}/>
-        <DatesAction onDelete={onDelete}/>
+        <DatesCount person={personData}/>
+        <DatesList person={personData}/>
+        <DatesAction deleteData={onDelete} onViewData={onViewData}/>
 
       </Container>
     </div>
